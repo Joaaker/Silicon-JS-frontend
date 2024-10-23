@@ -1,0 +1,46 @@
+.subscribe-form{
+    background-color: var(--clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--clr-gray300);
+    border-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 100%;
+    max-width: 400px; 
+
+    label{
+        margin: 0 0.5rem;
+        user-select: none;
+
+        @include mobile{
+            border: none;
+            max-width: 200px;
+        }
+        
+        i{
+            margin-left: 0.8rem;
+            
+            @include tablet-desktop{
+                margin-left: 0.5rem;
+            }
+
+            @include desktop{
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    input{
+        margin: 0 0.5rem;
+        border: none;
+        outline: none;
+        overflow: hidden;
+        font-size: 14px;
+
+        @include desktop{
+            min-width: 270px;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.nav-link{
+    @include desktop{
+        @include link;
+        color: var(--clr-gray800);
+        margin-right: auto;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.store-btn{
+    background-color: black;
+    display: flex;
+    @include center;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+    
+    img{
+        max-width: 100%;
+    }
+    
+    @include mobile{//padding med clamp skriven av ChatGPT
+        padding: 0.7rem clamp(6rem, 6rem + 1vw, 8rem);
+        max-width: 95%;
+        overflow: hidden;
+    }
+    
+    @include tablet{ //padding med clamp skriven av ChatGPT
+        padding: 0.6rem clamp(1.2rem, 1.2rem + 0vw, 1.5rem);
+    }
+    @include desktop{
+        padding: 0.6rem 1.7rem;
+    }
+}
+
+#signin-auth-btn{
+    width: 140px;
+    span{
+        margin-left: 0.7rem;
+    }
+}
+
+.pageLink{
+    @include link;
+    font-size: 1rem;
+    color: var(--clr-gray600);
+}
+
+#homepageLink{
+    span{
+        margin-left: .3rem;
+        margin-right: .8rem;
+    }
+}
+
+#contactLink{
+    margin-left: .8rem;
+}
+
+.linkActive{
+    color: var(--clr-primary);
+}
+
+.linkWithArrow{
+    @include link;
+    color: var(--clr-primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    span{
+        margin-right: .7rem;
+    }
+}
+
+.externalLinksContainer{
+    display: flex;
+    gap: 1rem;
+    a{
+        @include link;
+        display: flex;
+        @include center;
+        background-color: var(--clr-gray-200);
+        height: 44px;
+        width: 44px;
+        border-radius: 8px;
+        i{
+            color: var(--clr-gray800);
+        }
+    }
+}

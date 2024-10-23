@@ -1,0 +1,26 @@
+.container-footer{
+  height: 50vh;
+}
+
+footer{ 
+  @include flex-column;
+  @include center;
+  font-size: 14px;
+  color: var(--clr-gray600);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 5px;
+
+  p{
+    @include mobile{
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @include tablet-desktop{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+  }
+}

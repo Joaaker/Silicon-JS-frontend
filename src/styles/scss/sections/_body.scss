@@ -1,0 +1,24 @@
+.gradient-wrapper{
+    background: var(--clr-linear-gradient);
+}
+
+.indexMain{
+    @include flex-column;
+    @include center;
+    
+    p{
+        @include text;
+    }
+}
+
+.wrapper{
+    @include flex-column;
+    @include center;
+}
+
+.wrapperBackgroundColor{
+    @include flex-column;
+    @include center;
+    width: 100%;
+    background-color: var(--clr-background-light);
+}

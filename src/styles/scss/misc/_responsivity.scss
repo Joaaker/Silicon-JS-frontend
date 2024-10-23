@@ -1,0 +1,31 @@
+@include mobile{
+    .all-logos-container,
+    .imageContainer,
+    .darkmode-toggle-text,
+    .tablet-desktop-only,
+    .tablet-only,
+    .hide-for-mobile{
+        display: none;
+    }
+}    
+
+@include mobile-tablet{
+  .desktop-only,
+  .iphone-image-container{
+    display: none;
+  }
+}
+
+@include tablet-desktop{
+  .mobile-only{
+    display: none;
+  }
+}
+
+@include desktop{
+  .mobile-tablet-only,
+  .tablet-only,
+  .btn-mobile-tablet{
+    display: none;
+  }
+}

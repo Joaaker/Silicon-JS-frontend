@@ -1,0 +1,11 @@
+@mixin link{
+    font-family: "Manrope", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+    text-decoration: none;
+    }
+}

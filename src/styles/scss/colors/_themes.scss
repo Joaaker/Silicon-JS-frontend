@@ -1,0 +1,166 @@
+html.dark-mode{
+    background-color: var(--clr-dark900);
+}
+
+.dark-display{
+    display: none;
+    @include dark-mode{
+        display: block;
+    }
+}
+
+.light-display{
+    display: none;
+    @include light-mode{
+        display: block;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, #hamburger, i{
+    @include dark-mode {
+        color: var(--clr-white);
+    }
+}
+
+p, .upperWrapper ul li{
+    @include dark-mode{
+        color: var(--clr-white-high-opacity);
+    }
+}
+
+.nav-link{
+    @include dark-mode{
+        color: var(--clr-gray300);
+    }
+}
+
+button.circle-btn,
+.img-container-features img{
+    @include dark-mode{
+        background-color: var(--clr-white-opacity);
+    }
+}
+
+.discover-btn-container .circle-btn i{
+    @include dark-mode{
+        color: var(--clr-white);
+    }
+}
+.discover-more-text{
+    @include dark-mode{
+        color: var(--clr-white-high-opacity);
+    }
+}
+
+.logo-container{
+    @include dark-mode{
+        border: 1px solid var(--clr-white-opacity);
+    }
+}
+
+.testimonials,
+.slider,
+.subscribe-section{
+    @include dark-mode{
+        background-color: var(--clr-white-opacity);
+    }
+}
+
+.FAQ-items-container{
+    @include dark-mode {
+        @include mobile{
+            border: 1px solid var(--clr-white-opacity);
+        }
+    } 
+}
+
+.FAQ-item{
+    @include dark-mode {
+        background-color: var(--clr-white-low-opacity);
+
+        &:has(.dropdown-btn[aria-expanded="true"]) { /* Kod från Chat-GPT*/
+            @include tablet-desktop{
+                border: 1px solid var(--clr-white-opacity);
+            }
+        }   
+    }
+}
+
+.FAQ-item.expanded{ 
+    @include dark-mode{
+        .dropdown-btn i{
+            background-color: var(--clr-primary);
+        }
+        .FAQ-answer {
+            @include mobile{
+                border-bottom: 1px solid var(--clr-white-opacity);
+            }
+        }
+    }
+}
+
+.FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer {
+    @include dark-mode{
+        @include mobile{
+            border-top: 1px solid var(--clr-white-opacity);
+        }
+    } 
+}
+
+.dropdown-btn-container{
+    @include dark-mode {
+        @include mobile{
+            border-bottom: 1px solid var(--clr-white-opacity);
+        }
+
+        .dropdown-btn {
+
+            span {
+                color: var(--clr-white);
+            }
+
+            i {
+                background-color: var(--clr-white-low-opacity);
+            }
+        }
+    }
+}
+
+.contact-container{
+    @include dark-mode{
+        @include desktop{
+            border: 1px solid var(--clr-white-opacity);
+        }
+    }
+}
+
+.subscribe-form {
+    @include dark-mode{
+        border: none;
+        
+        @include desktop {
+            border: 1px solid var(--clr-white-opacity);
+            background-color: var(--clr-white-opacity);
+        }
+    }
+}
+
+#email {
+    @include desktop {
+        @include dark-mode {
+            background-color: transparent;
+        }
+    }
+}
+
+.store-btn{
+    @include dark-mode{
+        background-color: var(--clr-white);
+    }
+}
+
+.light-display{
+    @include dark-mode{
+        display: none;
+    }
+}

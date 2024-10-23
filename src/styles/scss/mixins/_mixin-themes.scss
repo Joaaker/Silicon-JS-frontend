@@ -1,0 +1,11 @@
+@mixin dark-mode {
+  html.dark-mode & {
+    @content;
+  }
+}
+
+@mixin light-mode {
+  html.light-mode & {
+    @content;
+  }
+}

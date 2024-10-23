@@ -1,0 +1,231 @@
+.FAQ-contact-section{
+  display: grid;
+  align-items: center;
+  max-width: 746px;
+  margin: 0 auto;
+
+  @include desktop{
+    max-width: 1320px;
+    padding: 6rem 1rem;
+  }
+}
+
+.text-container{
+  @include flex-column;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+
+  @include desktop{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin-right: 8.5rem;
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  h2{
+    @include desktop{
+      display: flex;
+      text-align: start;
+    }
+  }
+
+  p{
+    @include desktop{
+      display: flex;
+      text-align: start;
+    }
+  }
+}
+  
+.FAQ-items-container{
+  @include flex-column;
+  margin: 1rem;
+  border: 1px solid var(--clr-gray300);
+  border-radius: 8px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.034); 
+  
+  @include tablet-desktop{
+    border: none;
+    gap: 1rem; 
+  }
+
+  @include desktop{
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+  }
+}
+  
+.FAQ-item{
+
+  @include tablet-desktop{
+    border: none;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.151);
+    border-radius: 8px;
+  }
+
+  p{
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+}
+
+/* Kod från Chat-GPT*/
+/* Ta bort bottenramen från sista FAQ-knappen */
+.FAQ-items-container .FAQ-item:last-child .dropdown-btn-container {
+  border-bottom: none;
+}
+
+/* Kod från Chat-GPT*/
+/* Ta bort bottenramen från sista FAQ-svaret när det är expanderat */
+.FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer { 
+  border-bottom: none;
+  border-top: 1px solid var(--clr-gray300);
+
+  @include tablet-desktop{
+    border-top: none;
+  }
+}
+
+.FAQ-answer { /* Grund-kod från Chat-GPT*/
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in; 
+}
+
+.FAQ-item.expanded .FAQ-answer { /* Kod från Chat-GPT*/
+  max-height: 500px; 
+  border-bottom: 1px solid var(--clr-gray300);
+  
+  @include tablet{
+    max-height: 200px; 
+  }
+  
+  @include tablet-desktop{
+    border: none;
+    border-radius: 8px;
+  }
+
+  @include desktop{
+    max-height: 170px; 
+  }
+}
+
+.dropdown-btn-container{
+  display: flex;
+  width: 100%;
+  user-select: none;
+  border-bottom: 1px solid var(--clr-gray300);
+
+  @include tablet-desktop{
+    border: none;
+  }
+
+  .dropdown-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 74px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    span{
+      font-weight: 600;
+      font-size: 1rem;
+      margin-left: 0.4rem;
+      text-align: start;
+    }
+
+    i{
+      width: 36px; 
+      height: 36px; 
+      border-radius: 50%;
+      background-color: var(--clr-background-light); 
+      border: none;
+      display: flex;
+      @include center;
+      font-size: 11px;
+      line-height: 4px;
+      box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.082); 
+      margin-right: 0.4rem;
+      margin-left: 5px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.FAQ-item.expanded .dropdown-btn i{ /* Grund-kod skriven av ChatGPT */
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.contact-us-container{
+  @include tablet-desktop{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  @include desktop{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-right: 7.5rem;
+    max-width: 400px;
+  }
+
+  .contact-container{
+    @include tablet-desktop{
+      @include flex-column;
+      border: 1px solid var(--clr-gray300);
+      border-radius: 8px;
+      padding: 1rem;
+      width: 46%;
+      height: 166px;
+
+      .fa-phone-volume{
+        font-size: 1.45rem;
+        width: 24px;
+        margin: 0.5rem 0 1rem 0.5rem;
+      }
+
+      .fa-comment-dots{
+        font-size: 1.5rem;
+        width: 24px;
+        margin: 0.5rem 0 1rem 0.3rem;
+        justify-self: flex-start;
+      }
+
+      p{
+        margin-top: 0.5rem;
+        margin-bottom: 1.3rem;
+        font-size: 14px;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      .green{
+        color: #22C55E;
+      }
+
+      .purple{
+        color: var(--clr-primary);
+      }
+    }
+  }
+}
+
+#contact-us-btn{
+  margin: 2rem auto;
+  width: 163px;
+  height: 49px;
+  font-size: medium;
+}

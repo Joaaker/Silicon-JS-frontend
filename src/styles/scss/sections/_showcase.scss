@@ -1,0 +1,146 @@
+.showcase{
+    display: grid;
+
+    @include tablet-desktop{
+        max-width: 100%;
+        padding: 1.8rem;
+        padding-bottom: 0;
+        margin: 0 auto;
+    }
+
+    @include desktop{
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5rem;
+        gap: 1rem;
+    }
+
+    p {
+        @include text;
+        display: flex;
+        @include center;
+        font-size: 18px;
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        
+        @include tablet-desktop{
+            padding: 0;
+            grid-column: 1 / 3;
+            grid-row:  3 / 5;
+            margin-top: 0;
+            text-align: start;
+            margin-bottom: 2rem;
+            max-width: 100%;
+        }
+
+        @include desktop{
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.h1-container{
+
+    @include tablet{
+        grid-column: 1 / 8;
+        grid-row: 1 / 2;
+        margin: 0 auto;
+    }
+
+    @include desktop{
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        margin-right: auto;
+        margin-left: 0;
+        padding-top: 1.5rem;
+        max-width: 500px;
+    }
+
+    h1{
+        padding: 0 var(--base-padding);
+        margin: 0.5rem auto;
+        font-size: 40px;
+      
+        @include mobile-tablet{
+            display: flex;
+            text-align: center;
+        }
+
+        @include tablet{
+            max-width: 450px;
+            padding-bottom: 1rem; 
+        }
+
+        @include desktop{
+            font-size: 52px;
+            padding-left: 0;
+        }
+    }
+}
+
+#appstore{
+    @include tablet-desktop{
+        grid-column: 1 / 2;
+        grid-row:  5 / 6;
+    }
+
+    @include desktop{
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+}
+
+#googleplay{
+    @include tablet{
+        margin-left: 1rem;
+    }
+    @include tablet-desktop{
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    @include desktop{
+        grid-column: 2 / 4;
+        grid-row: 3 / 5;
+        margin-left: 0.5rem;
+    }
+}
+
+.discover-btn-container{
+    @include tablet-desktop{
+        padding: 2rem 0;
+        grid-column: 1 / 3;
+        grid-row: 6 / 8;
+        margin-right: auto;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    @include desktop{
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        margin-top: auto;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.imageContainer{
+    @include tablet-desktop{
+        display: block;
+        grid-column: 3 / 8;
+        grid-row: 2 / 8;
+        width: 100%;
+    
+        img{
+          max-width: 100%;
+        }
+    }
+    @include desktop{
+        grid-column: 4 / 8;
+        grid-row: 1 / 7;
+    }
+}

@@ -1,0 +1,23 @@
+:root {
+  --clr-primary: hsl(238, 85%, 68%);
+  --clr-linear-gradient: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(218,70,239,0.05) 42%, rgba(241,244,253,0.07) 83%);
+  --clr-white: #FFFFFF;
+  --clr-white-high-opacity: #ffffffa7;
+  --clr-white-opacity: rgba(255, 255, 255, 0.08);
+  --clr-white-low-opacity: rgba(255, 255, 255, 0.04);
+  --clr-dark900: #0B0F19;
+  --clr-gray800: #33354D;
+  --clr-gray700: #565973;
+  --clr-gray600: #9397AD;
+  --clr-gray400: #D4D7E5;
+  --clr-gray300: #E2E5F1;
+  --clr-gray-200: #EFF2FC;
+  --clr-icon: #3E4265;
+  --clr-text-grey: #585C7B;
+  --clr-background-light: #F3F6FF;
+  --clr-system-error: #EF4444;
+}
+
+//Används för darken i mixins-buttons
+$clr-primary: hsl(238, 85%, 68%);
+$clr-white: #FFFFFF;

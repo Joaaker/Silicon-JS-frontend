@@ -1,0 +1,63 @@
+
+.mapSection{
+    display: flex;
+    gap: 7rem;
+    padding: 8rem 0;
+}
+
+.mapContainer{
+    overflow: hidden;
+    width: 38rem;
+}
+
+iframe{
+    margin-top: -50px;
+    width: 100%;
+    overflow: hidden;
+    border: 0;
+}
+
+.adressContainer{
+    @include flex-column;
+    gap: .2rem;
+    margin-bottom: 1.5rem;
+    h3{
+        padding: 1rem 0;
+    }
+}
+
+.adress{
+    display: flex;
+    align-items: center;
+    i{ 
+        margin: .5em;
+        margin-left: 0;
+    }
+}
+
+.phoneNumber{
+    display: flex;
+    align-items: center;
+    i{ 
+        margin: .5em;
+        margin-left: 0;
+    }
+}
+
+.openHours{
+    display: grid;
+    justify-content: start;
+    i{ 
+        margin: .5em;
+        margin-left: 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+    h4{
+        grid-column: 2 / 3;
+    }
+    p {
+        grid-column: 3 / 4;
+
+    }
+}

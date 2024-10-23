@@ -1,0 +1,19 @@
+.testimonials{
+    width: 100%;
+    background-color: var(--clr-background-light);
+    padding: 5rem 0;
+}
+
+.testimonials-wrapper{
+    max-width: 1320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    h2{
+        font-size: 34px;
+        align-self: flex-start;
+        margin-right: 5rem;
+    }
+}
