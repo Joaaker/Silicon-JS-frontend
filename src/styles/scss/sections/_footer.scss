@@ -1,7 +1,3 @@
-.container-footer{
-  height: 50vh;
-}
-
 footer{ 
   @include flex-column;
   @include center;

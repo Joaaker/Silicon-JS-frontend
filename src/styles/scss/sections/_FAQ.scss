@@ -190,12 +190,15 @@
       height: 166px;
 
       .fa-phone-volume{
+        color: var(--clr-primary); 
+        transform: rotate(330deg);
         font-size: 1.45rem;
         width: 24px;
         margin: 0.5rem 0 1rem 0.5rem;
       }
 
       .fa-comment-dots{
+        color: var(--clr-green);
         font-size: 1.5rem;
         width: 24px;
         margin: 0.5rem 0 1rem 0.3rem;
@@ -213,11 +216,17 @@
       }
 
       .green{
-        color: #22C55E;
+        color: var(--clr-green);
+        i{
+          color: var(--clr-green);
+        }
       }
 
       .purple{
         color: var(--clr-primary);
+        i{
+          color: var(--clr-primary);
+        }
       }
     }
   }

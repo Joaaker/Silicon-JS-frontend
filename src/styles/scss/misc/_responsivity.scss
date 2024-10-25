@@ -17,7 +17,8 @@
 }
 
 @include tablet-desktop{
-  .mobile-only{
+  .mobile-only,
+  div.externalLinksContainer a.mobile-only{
     display: none;
   }
 }

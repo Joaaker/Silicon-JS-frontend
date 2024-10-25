@@ -17,8 +17,7 @@
 }
 
 .wrapperBackgroundColor{
-    @include flex-column;
-    @include center;
+    display: grid;
     width: 100%;
     background-color: var(--clr-background-light);
 }

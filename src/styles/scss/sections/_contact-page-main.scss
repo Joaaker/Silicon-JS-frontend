@@ -1,15 +1,33 @@
 .contactMain{
-    display: grid;
-    width: 1320px;
     padding-top: 3rem;
     gap: 2rem;
+    align-items: center;
+    justify-self: center;
+
+    @include mobile-tablet{
+        @include flex-column;
+        padding: 0;
+    }
+    
+    @include desktop{
+        width: 1320px;
+        display: grid;
+
+    }
 }
 
 .pageHighlight{
-    display: flex;
-    align-items: baseline;
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    
+    @include desktop{
+        display: flex;
+        align-items: baseline;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    i.fa-angles-right{
+        margin-right: .7rem;
+    }
 }
 
 .fa-angles-right{
@@ -20,13 +38,53 @@
 
 
 .ContactUsContainer{
-    grid-column: 1 / 2;
-    grid-row: 2 / 4;
     @include flex-column;
-    gap: 3rem;
-    h1{
+    gap: 2rem;
+
+    @include mobile{
+        padding: 3rem 0;
+    }
+
+    @include tablet{
+        display: grid;
+        gap: 1rem;
+
+        h1{
+            text-align: center;
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        #i-c-g-1{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3; 
+        }
+
+        #i-c-g-2{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+    
+    @include desktop{
+        gap: 3rem;
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+    
+}
+
+.ContactPageH1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    @include mobile{
+        text-align: center;
+    }
+    
+    @include tablet-desktop{
         font-size: 2.8em;
-        margin-bottom: 1rem;
+        
     }
 }
 
@@ -38,12 +96,16 @@
     .circle-icon-container{
         display: flex;
         @include center;
-        grid-column: 1 / 2;
-        grid-row: 1 / 4;
         width: 60px;
         height: 60px;
         border-radius: 50%;
         background-color: var(--clr-white);
+        
+        @include desktop{
+            grid-column: 1 / 2;
+            grid-row: 1 / 4;
+        }
+
         i{ 
             font-size: 26px; 
             color: var(--clr-primary);
@@ -73,17 +135,42 @@
 .consultation-form-container{
     @include flex-column;
     @include center;
-    transform: translateY(50px);
     background-color: var(--clr-white);
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    padding: 5rem 3rem;
-    h2{
-        font-size: 2rem;
+    padding: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    @include mobile{
+        min-width: 100vw;
     }
+    
+    @include tablet-desktop{
+        transform: translateY(50px);
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        padding: 5rem 3rem;
+    }
+
+
+    h2{
+        display: flex;
+        font-size: 2rem;
+
+        @include mobile{
+            text-align: center
+        }
+    }
+
     form{
         @include flex-column;
-        width: 100%;
+        
+        @include mobile{
+            width: 80%;
+        }
+
+        @include tablet-desktop{
+            width: 100%;
+        }
+
         label{
             font-weight: 600;
             font-size: 1.2em;

@@ -6,6 +6,8 @@
   --clr-white-opacity: rgba(255, 255, 255, 0.08);
   --clr-white-low-opacity: rgba(255, 255, 255, 0.04);
   --clr-dark900: #0B0F19;
+  --clr-dark850: #131823;
+  --clr-dark800: #1c2333;
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
   --clr-gray600: #9397AD;
@@ -16,8 +18,9 @@
   --clr-text-grey: #585C7B;
   --clr-background-light: #F3F6FF;
   --clr-system-error: #EF4444;
+  --clr-green: #22C55E;
 }
 
-//Används för darken i mixins-buttons
+//Used for "darken" in _mixins-buttons.scss
 $clr-primary: hsl(238, 85%, 68%);
 $clr-white: #FFFFFF;

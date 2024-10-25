@@ -45,6 +45,9 @@
     font-size: 1rem;
     color: var(--clr-gray600);
 }
+.pageLink.active{
+    color: var(--clr-primary);
+}
 
 #homepageLink{
     span{
@@ -61,13 +64,16 @@
     color: var(--clr-primary);
 }
 
-.linkWithArrow{
+a.linkWithArrow{
     @include link;
     color: var(--clr-primary);
     font-weight: 600;
     font-size: 1.2rem;
     span{
         margin-right: .7rem;
+    }
+    i{
+        color: var(--clr-primary);
     }
 }
 
