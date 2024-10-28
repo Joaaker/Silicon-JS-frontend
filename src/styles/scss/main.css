@@ -45,8 +45,12 @@ html.light-mode .light-display {
   display: block;
 }
 
-html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6, html.dark-mode .p-logo, html.dark-mode .store-btn, html.dark-mode #hamburger, html.dark-mode i {
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6, html.dark-mode .p-logo, html.dark-mode .store-btn, html.dark-mode i {
   color: var(--clr-white);
+}
+
+html.dark-mode .hamburger .bar {
+  background-color: var(--clr-white);
 }
 
 html.dark-mode p, html.dark-mode .upperWrapper ul li, html.dark-mode label {
@@ -67,6 +71,9 @@ html.dark-mode .consultation-form-container select {
 
 html.dark-mode .nav-link {
   color: var(--clr-gray300);
+}
+html.dark-mode .nav-link.active {
+  color: var(--clr-primary);
 }
 
 html.dark-mode button.circle-btn,
@@ -217,6 +224,17 @@ input, label, button, textarea, select, span, ul {
           user-select: none;
 }
 
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 .primary-btn {
   font-family: "Manrope", sans-serif;
   background-color: var(--clr-primary);
@@ -240,12 +258,6 @@ input, label, button, textarea, select, span, ul {
 }
 .primary-btn:active {
   background-color: #393fef;
-}
-
-.btn-mobile-tablet {
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
 }
 
 /* Grund-Kod för toggleknapp skriven av ChatGPT */
@@ -379,6 +391,65 @@ input, label, button, textarea, select, span, ul {
   font-size: 1.3rem;
 }
 
+/* HAMBURGER 2 */
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: var(--clr-icon);
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar1 {
+  transform: translateX(40px);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2 {
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3 {
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4 {
+  transform: translateX(-40px);
+  background-color: transparent;
+  overflow: hidden;
+}
+
 .subscribe-form {
   background-color: var(--clr-white);
   display: flex;
@@ -450,19 +521,21 @@ p {
   padding: 1rem;
 }
 
-@media (min-width: 1340px) {
-  .nav-link {
-    font-family: "Manrope", sans-serif;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--clr-gray800);
-    margin-right: auto;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .nav-link:link, .nav-link:visited, .nav-link:hover, .nav-link:active {
-    text-decoration: none;
-  }
+.nav-link {
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--clr-gray800);
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-link:link, .nav-link:visited, .nav-link:hover, .nav-link:active {
+  text-decoration: none;
+}
+.nav-link.active {
+  color: var(--clr-primary);
+  font-weight: 700;
 }
 
 .store-btn {
@@ -615,11 +688,6 @@ a.linkWithArrow i {
     padding: 0 2rem;
   }
 }
-@media (min-width: 768px) {
-  .navbar {
-    margin-bottom: 1rem;
-  }
-}
 @media (min-width: 1340px) {
   .navbar {
     max-width: 1320px;
@@ -645,9 +713,33 @@ a.linkWithArrow i {
   margin-left: 1.5rem;
 }
 
+@media (min-width: 0px) and (max-width: 1339px) {
+  .hamburger-btn {
+    margin-right: 0.5rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 1339px) {
-  .btn-mobile-tablet {
+  .hamburger-btn {
     margin-left: 1rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1339px) {
+  .expanded-nav {
+    display: flex;
+    flex-direction: column;
+    justify-self: self-end;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  .expanded-nav.active {
+    transform: scaleY(1);
+  }
+  .expanded-nav a {
+    margin-top: 1rem;
   }
 }
 
@@ -657,8 +749,7 @@ a.linkWithArrow i {
 @media (min-width: 768px) {
   .showcase {
     max-width: 100%;
-    padding: 1.8rem;
-    padding-bottom: 0;
+    padding: 0 1.8rem;
     margin: 0 auto;
   }
 }
@@ -1907,8 +1998,7 @@ iframe {
 }
 @media (min-width: 1340px) {
   .mobile-tablet-only,
-  .tablet-only,
-  .btn-mobile-tablet {
+  .tablet-only {
     display: none;
   }
 }/*# sourceMappingURL=main.css.map */

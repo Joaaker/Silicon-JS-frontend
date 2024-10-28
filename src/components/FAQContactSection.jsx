@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const FAQContactSection = () => {
   return (
@@ -81,18 +82,18 @@ const FAQContactSection = () => {
         <div className="contact-container">
           <i className="fa-solid fa-phone-volume"></i>
           <p>Still have  questions?</p>
-          <a href="#" className="purple">
+          <Link to="/Contact" className="purple">
             <span>Contact us</span>
             <i className="fa-solid fa-arrow-right"></i>
-          </a>
+          </Link>
         </div>
         <div className="contact-container">
           <i className="fa-solid fa-comment-dots fa-flip-horizontal"></i>
           <p>Don't like phone calls?</p>
-          <a href="#" className="green">
+          <Link to="/Contact" className="green">
             <span>Contact us</span>
             <i className="fa-solid fa-arrow-right"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

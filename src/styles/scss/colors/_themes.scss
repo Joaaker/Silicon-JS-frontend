@@ -22,9 +22,14 @@ html.dark-mode{
     }
 }
 
-h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, #hamburger, i{
+h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i{
     @include dark-mode {
         color: var(--clr-white);
+    }
+}
+.hamburger .bar{
+    @include dark-mode {
+        background-color: var(--clr-white);
     }
 }
 
@@ -54,6 +59,9 @@ p, .upperWrapper ul li, label{
 .nav-link{
     @include dark-mode{
         color: var(--clr-gray300);
+        &.active{
+            color: var(--clr-primary);
+        }
     }
 }
 

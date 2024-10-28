@@ -2,12 +2,6 @@
   @include btn;
 }
 
-.btn-mobile-tablet{
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-}
-
 /* Grund-Kod för toggleknapp skriven av ChatGPT */
 .dark-mode-toggle {
   display: flex;
@@ -114,4 +108,66 @@
 
 #appointmentBtn{
   font-size: 1.3rem;
+}
+
+
+
+//Hamburger menu from https://www.sliderrevolution.com/resources/css-hamburger-menu/
+/* HAMBURGER 2 */
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: var(--clr-icon);
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute; 
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar1{
+  transform: translateX(40px);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+  transform: rotate(-45deg);
+  overflow: hidden;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+  transform: translateX(-40px);
+  background-color: transparent;
+  overflow: hidden;
 }

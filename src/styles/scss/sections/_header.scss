@@ -9,10 +9,6 @@
     @include tablet{
         padding: 0 2rem;
     }
-
-    @include tablet-desktop{
-        margin-bottom: 1rem;
-    }
     
     @include desktop{
         max-width: 1320px;
@@ -38,8 +34,31 @@
     margin-left: 1.5rem;
 }
 
-.btn-mobile-tablet{
+.hamburger-btn{
+    @include mobile-tablet{
+        margin-right: .5rem;
+    }
+
     @include  tablet{
         margin-left: 1rem;
+    }
+}
+
+.expanded-nav {
+    @include mobile-tablet{
+        @include flex-column;
+        justify-self: self-end;
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform 0.3s ease-in-out;
+      
+        &.active {
+          transform: scaleY(1);
+        }
+        a{
+            margin-top: 1rem;
+        }
     }
 }

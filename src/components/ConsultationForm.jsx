@@ -5,11 +5,11 @@ const ConsultationForm = () => {
     <div className="consultation-form-container">
         <h2>Get Online Consultation</h2>
         <form action="#">
-            <label for="name">Full name</label>
+            <label htmlFor="name">Full name</label>
             <input type="text" required/>
-            <label for="email">Email address</label>
+            <label htmlFor="email">Email address</label>
             <input type="email" required/>
-            <label for="select">Specialist</label>
+            <label htmlFor="select">Specialist</label>
             <select name="" id="">
                 <option value="0"></option>
                 <option value="1">Lorem</option>

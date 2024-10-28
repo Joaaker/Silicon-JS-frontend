@@ -25,8 +25,7 @@
 
 @include desktop{
   .mobile-tablet-only,
-  .tablet-only,
-  .btn-mobile-tablet{
+  .tablet-only{
     display: none;
   }
 }

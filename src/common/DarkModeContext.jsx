@@ -1,19 +1,12 @@
-<Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+// Code for DarkModeContext written with assistance from ChatGPT
+import React, { createContext, useState, useEffect } from 'react';
 
-      <Footer />
+export const DarkModeContext = createContext();
 
-
-// import Navbar from './components/navbar';
-// import { Footer } from './components/Footer';
-
-
+export const DarkModeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkmode');
-    if (savedMode) {
-      return savedMode === 'on';
-    } else {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
+    return savedMode ? savedMode === 'on' : window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
@@ -27,3 +20,10 @@
       localStorage.setItem('darkmode', 'off');
     }
   }, [darkMode]);
+
+  return (
+    <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>
+      {children}
+    </DarkModeContext.Provider>
+  );
+};

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Features2 = () => {
   return (
@@ -20,10 +21,10 @@ const Features2 = () => {
                 Manage payments and transactions online
               </li>
             </ul>
-            <a className="primary-btn learn-more-btn" href="#">
+            <Link className="primary-btn learn-more-btn" to="/">
               <span>Learn more</span>
               <i className="fa-solid fa-arrow-right"></i> 
-            </a>
+            </Link>
         </div>
         <div id="forecast-container">
             <img src="./public/Images/forecast.svg" alt="forecast preview"/>
@@ -45,10 +46,10 @@ const Features2 = () => {
           <div className="infoContainer" id="lower-5" >   
             <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
           </div>
-          <a className="primary-btn learn-more-btn" id="lower-6" href="#">
+          <Link className="primary-btn learn-more-btn" id="lower-6" to="/">
             <span>Learn more</span>
             <i className="fa-solid fa-arrow-right"></i> 
-          </a>
+          </Link>
         </div>
       </article>
     </>

@@ -10,10 +10,10 @@ const SubscribeSection = () => {
       <h2 className="desktop-only">Subscribe to our newsletter to stay informed about latest updates</h2>
       <div className="subscribe-form-container">
         <form action="#" className="subscribe-form" id="subscribe-form">
-          <label for="email"> 
+          <label htmlFor="email"> 
             <i className="fa-regular fa-envelope"></i>
           </label>
-          <input id="email" type="" placeholder="Your Email" autocomplete="email" required/>
+          <input id="email" type="" placeholder="Your Email" autoComplete="email" required/>
        </form>
         <button type="submit" form="subscribe-form" id="subscribe-btn" className="primary-btn">Subscribe</button>
       </div>

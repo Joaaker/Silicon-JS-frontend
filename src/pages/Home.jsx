@@ -8,23 +8,23 @@ import Features2 from '../components/Features2';
 import Testimonials from '../components/Testimonials';
 import FAQContactSection from '../components/FAQContactSection';
 import SubscribeSection from '../components/SubscribeSection';
-import  { Footer } from '../components/Footer';
+import { Footer } from '../components/Footer';
 
-const Home = ({ darkMode, setDarkMode }) => {
+const Home = () => {
   return (
     <>
       <div className="gradient-wrapper">
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Showcase/>
+        <Navbar />
+        <Showcase />
       </div>
       <main className="indexMain">  
-        <Logos/>
-        <Features/>
-        <Slider/>
-        <Features2/>
-        <Testimonials/>
-        <FAQContactSection/>
-        <SubscribeSection/>
+        <Logos />
+        <Features />
+        <Slider />
+        <Features2 />
+        <Testimonials />
+        <FAQContactSection />
+        <SubscribeSection />
       </main>
       <Footer />
     </>

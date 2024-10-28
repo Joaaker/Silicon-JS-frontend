@@ -1,10 +1,12 @@
 .nav-link{
-    @include desktop{
-        @include link;
-        color: var(--clr-gray800);
-        margin-right: auto;
-        font-size: 20px;
-        font-weight: 600;
+    @include link;
+    color: var(--clr-gray800);
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: 600;
+    &.active{
+        color: var(--clr-primary);
+        font-weight: 700;
     }
 }
 

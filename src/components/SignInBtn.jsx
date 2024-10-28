@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SignInBtn = () => {
   return (
-    <a className="primary-btn desktop-only" id="signin-auth-btn" href="#">
+    <Link className="primary-btn desktop-only" id="signin-auth-btn" to="/">
         <i className="fa-regular fa-user"></i>
         <span>Sign in / up</span>
-    </a>
+    </Link>
   )
 }
 
