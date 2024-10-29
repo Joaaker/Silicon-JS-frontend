@@ -107,42 +107,14 @@ html.dark-mode .consultation-form-container {
   background-color: var(--clr-dark850);
 }
 
-@media (max-width: 767px) {
-  html.dark-mode .FAQ-items-container {
-    border: 1px solid var(--clr-white-opacity);
-  }
-}
-
 html.dark-mode .FAQ-item {
   background-color: var(--clr-white-low-opacity);
-}
-html.dark-mode .FAQ-item:has(.dropdown-btn[aria-expanded=true]) { /* Kod från Chat-GPT*/ }
-@media (min-width: 768px) {
-  html.dark-mode .FAQ-item:has(.dropdown-btn[aria-expanded=true]) {
-    border: 1px solid var(--clr-white-opacity);
-  }
 }
 
 html.dark-mode .FAQ-item.expanded .dropdown-btn i {
   background-color: var(--clr-primary);
 }
-@media (max-width: 767px) {
-  html.dark-mode .FAQ-item.expanded .FAQ-answer {
-    border-bottom: 1px solid var(--clr-white-opacity);
-  }
-}
 
-@media (max-width: 767px) {
-  html.dark-mode .FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer {
-    border-top: 1px solid var(--clr-white-opacity);
-  }
-}
-
-@media (max-width: 767px) {
-  html.dark-mode .dropdown-btn-container {
-    border-bottom: 1px solid var(--clr-white-opacity);
-  }
-}
 html.dark-mode .dropdown-btn-container .dropdown-btn span {
   color: var(--clr-white);
 }
@@ -1334,15 +1306,9 @@ article.features {
   display: flex;
   flex-direction: column;
   margin: 1rem;
-  border: 1px solid var(--clr-gray300);
   border-radius: 8px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.034);
-}
-@media (min-width: 768px) {
-  .FAQ-items-container {
-    border: none;
-    gap: 1rem;
-  }
+  gap: 1rem;
 }
 @media (min-width: 1340px) {
   .FAQ-items-container {
@@ -1351,12 +1317,10 @@ article.features {
   }
 }
 
-@media (min-width: 768px) {
-  .FAQ-item {
-    border: none;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.151);
-    border-radius: 8px;
-  }
+.FAQ-item {
+  border: none;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.151);
+  border-radius: 8px;
 }
 .FAQ-item p {
   margin: 0 0.5rem;
@@ -1364,49 +1328,15 @@ article.features {
   font-size: 14px;
 }
 
-/* Kod från Chat-GPT*/
-/* Ta bort bottenramen från sista FAQ-knappen */
-.FAQ-items-container .FAQ-item:last-child .dropdown-btn-container {
-  border-bottom: none;
-}
-
-/* Kod från Chat-GPT*/
-/* Ta bort bottenramen från sista FAQ-svaret när det är expanderat */
-.FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer {
-  border-bottom: none;
-  border-top: 1px solid var(--clr-gray300);
-}
-@media (min-width: 768px) {
-  .FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer {
-    border-top: none;
-  }
-}
-
 .FAQ-answer { /* Grund-kod från Chat-GPT*/
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in;
+  transition: max-height 0.4s ease-in;
 }
 
 .FAQ-item.expanded .FAQ-answer { /* Kod från Chat-GPT*/
-  max-height: 500px;
-  border-bottom: 1px solid var(--clr-gray300);
-}
-@media (min-width: 768px) and (max-width: 1339px) {
-  .FAQ-item.expanded .FAQ-answer {
-    max-height: 200px;
-  }
-}
-@media (min-width: 768px) {
-  .FAQ-item.expanded .FAQ-answer {
-    border: none;
-    border-radius: 8px;
-  }
-}
-@media (min-width: 1340px) {
-  .FAQ-item.expanded .FAQ-answer {
-    max-height: 170px;
-  }
+  max-height: 150px;
+  border-radius: 8px;
 }
 
 .dropdown-btn-container {
@@ -1415,12 +1345,6 @@ article.features {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-bottom: 1px solid var(--clr-gray300);
-}
-@media (min-width: 768px) {
-  .dropdown-btn-container {
-    border: none;
-  }
 }
 .dropdown-btn-container .dropdown-btn {
   display: flex;

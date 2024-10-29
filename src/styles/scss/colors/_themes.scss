@@ -109,23 +109,9 @@ button.circle-btn,
     }
 }
 
-.FAQ-items-container{
-    @include dark-mode {
-        @include mobile{
-            border: 1px solid var(--clr-white-opacity);
-        }
-    } 
-}
-
 .FAQ-item{
     @include dark-mode {
-        background-color: var(--clr-white-low-opacity);
-
-        &:has(.dropdown-btn[aria-expanded="true"]) { /* Kod från Chat-GPT*/
-            @include tablet-desktop{
-                border: 1px solid var(--clr-white-opacity);
-            }
-        }   
+        background-color: var(--clr-white-low-opacity);  
     }
 }
 
@@ -134,30 +120,13 @@ button.circle-btn,
         .dropdown-btn i{
             background-color: var(--clr-primary);
         }
-        .FAQ-answer {
-            @include mobile{
-                border-bottom: 1px solid var(--clr-white-opacity);
-            }
-        }
     }
 }
 
-.FAQ-items-container .FAQ-item:last-child.expanded .FAQ-answer {
-    @include dark-mode{
-        @include mobile{
-            border-top: 1px solid var(--clr-white-opacity);
-        }
-    } 
-}
 
 .dropdown-btn-container{
     @include dark-mode {
-        @include mobile{
-            border-bottom: 1px solid var(--clr-white-opacity);
-        }
-
         .dropdown-btn {
-
             span {
                 color: var(--clr-white);
             }

@@ -13,6 +13,19 @@ const Testimonials = () => {
             <img className="light-display" src="./public/Images/testimonial 2.svg" alt="customer testimonial 2"/>
             <img className="dark-display" src="./public/Images/testimonial 2 dark.svg" alt="customer testimonial 2"/>
           </div>
+          <div className='testimonial'>
+            <div className='quote'>
+              <i className="fa-solid fa-quote-left"></i>
+            </div>
+            <div className='ratingsContainer'>
+            <p className='customerComment'></p>
+            <div className='avatarImageContainer'>
+              
+            </div>
+
+
+            </div>
+          </div>
       </div>
     </article>
   )

@@ -4,7 +4,7 @@ const ConsultationForm = () => {
   return (
     <div className="consultation-form-container">
         <h2>Get Online Consultation</h2>
-        <form action="#">
+        <form noValidate>
             <label htmlFor="name">Full name</label>
             <input type="text" required/>
             <label htmlFor="email">Email address</label>
