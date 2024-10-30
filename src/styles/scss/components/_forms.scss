@@ -4,9 +4,7 @@
     justify-content: center;
     align-items: center;
     border: 1px solid var(--clr-gray300);
-    border-radius: 8px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+    border-radius: 10px;
     width: 100%;
     max-width: 400px; 
 
@@ -41,6 +39,105 @@
 
         @include desktop{
             min-width: 270px;
+        }
+    }
+}
+
+
+
+label i.fa-envelope{
+    color: var(--clr-gray600);
+}
+
+.messageBox{
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    button{
+        width: 25%;
+    }
+}
+
+.error-message{
+    color: var(--clr-system-error);
+    font-size: .7rem;
+}
+
+
+
+.consultation-form-container{
+    @include flex-column;
+    @include center;
+    background-color: var(--clr-white);
+    padding: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
+    @include mobile{
+        min-width: 100vw;
+    }
+    
+    @include tablet-desktop{
+        transform: translateY(50px);
+        grid-column: 2 / 3;
+        grid-row: 2 / 4;
+        padding: 5rem 3rem;
+    }
+
+
+    h2{
+        display: flex;
+        font-size: 2rem;
+
+        @include mobile{
+            text-align: center
+        }
+    }
+
+    form{
+        @include flex-column;
+        
+        @include mobile{
+            width: 80%;
+        }
+
+        @include tablet-desktop{
+            width: 100%;
+        }
+
+        label{
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        input{
+            font-size: 1.3rem;
+            padding: 0.7rem;
+            border: 1px solid var(--clr-gray400);
+            border-radius: 8px;
+            outline: none;
+            &:focus,
+            &:active {
+                border-color: var(--clr-gray700);
+            }
+        }
+        select{
+            outline: none;
+            font-size: 1.3rem;
+            padding: 0.7rem;
+            border: 1px solid var(--clr-gray400);
+            border-radius: 8px;
+            
+            &:focus,
+            &:active {
+                border-color: var(--clr-gray700);
+            }
+        }
+
+        #appointmentBtn{
+            margin-top: 7rem;
         }
     }
 }

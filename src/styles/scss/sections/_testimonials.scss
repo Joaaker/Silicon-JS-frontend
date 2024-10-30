@@ -17,3 +17,58 @@
         margin-right: 5rem;
     }
 }
+.testimonial{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 420px;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--clr-white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    
+    .quote{
+        grid-column: 2 span / 3;
+        grid-row: 1 / 2;
+        transform: translateX(-10px) translateY(-55px);
+        z-index: 10;
+    }
+    
+    .ratingsContainer{
+        display: flex;
+        align-items: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        gap: 0.2rem;
+        padding-top: .5rem;
+    }
+    
+    .customerComment {
+        word-spacing: .1rem;
+        line-height: 1.7rem;
+        font-size: 18px;
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        padding-bottom: 1.7rem;
+    }
+    
+    .avatarImageContainer{
+        grid-column: 1 / 2;
+        grid-row: 4 / 6;
+        padding-bottom: .2rem;
+    }
+    
+    .author{
+        transform: translateX(-20px);
+        color: black;
+        font-weight: bold;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    
+    .jobRole{
+        transform: translateX(-20px);
+        font-size: 0.8rem;
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+}

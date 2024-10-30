@@ -22,7 +22,7 @@ html.dark-mode{
     }
 }
 
-h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i{
+h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i, p.author{
     @include dark-mode {
         color: var(--clr-white);
     }
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i{
     }
 }
 
-p, .upperWrapper ul li, label{
+p, .upperWrapper ul li, label, input{
     @include dark-mode{
         color: var(--clr-white-high-opacity);
     }
@@ -89,7 +89,7 @@ button.circle-btn,
     }
 }
 
-.testimonials,
+article.testimonials,
 .slider,
 .subscribe-section{
     @include dark-mode{
@@ -97,7 +97,8 @@ button.circle-btn,
     }
 }
 
-.circle-icon-container{
+.circle-icon-container,
+.testimonial{
     @include dark-mode{
         background-color: var(--clr-white-low-opacity);
     }

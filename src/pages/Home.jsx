@@ -5,10 +5,10 @@ import Logos from '../components/Logos';
 import Features from '../components/Features';
 import Slider from '../components/Slider';
 import Features2 from '../components/Features2';
-import Testimonials from '../components/Testimonials';
 import FAQContactSection from '../components/FAQContactSection';
 import SubscribeSection from '../components/SubscribeSection';
 import { Footer } from '../components/Footer';
+import TestimonialsSection from '../components/TestimonialsSection';
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
         <Features />
         <Slider />
         <Features2 />
-        <Testimonials />
+        <TestimonialsSection/>
         <FAQContactSection />
         <SubscribeSection />
       </main>

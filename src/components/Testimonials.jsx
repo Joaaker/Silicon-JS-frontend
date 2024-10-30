@@ -1,34 +1,45 @@
-import React from 'react'
+// Code for Testimonials written with assistance from ChatGPT
+import React, { useState, useEffect } from 'react';
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    fetch('https://win24-assignment.azurewebsites.net/api/testimonials')
+      .then(response => response.json())
+      .then(data => setTestimonials(data))
+      .catch(error => console.error('Error fetching testimonials:', error));
+  }, []);
+
   return (
-    <article className="testimonials desktop-only">
-      <div className="testimonials-wrapper">
-        <h2>Clients are <br/> Loving Our App</h2>
-        <div className="img-container-testimonials">
-          <img className="light-display" src="./public/Images/testimonial 1.svg" alt="customer testimonial 1"/>
-          <img className="dark-display" src="./public/Images/testimonial 1 dark.svg" alt="customer testimonial 1"/>
+    <>
+      {testimonials.map((testimonial) => (
+        <div key={testimonial.id} className='testimonial'>
+          <div className='quote'>
+            <img src="/Images/quotes.svg" alt="quotes" />
+          </div>
+          <div className='ratingsContainer'>
+            {[...Array(testimonial.starRating)].map((_, i) => (
+              <div key={i} className='starContainer'>
+                <img src="/Images/star.svg" alt="rating star" />
+              </div>
+            ))}
+            {[...Array(5 - testimonial.starRating)].map((_, i) => (
+              <div key={i} className='emptyStarContainer'>
+                <img src="/Images/emptyStar.svg" alt="rating star" />
+              </div>
+            ))}
+          </div>
+          <p className='customerComment'>{testimonial.comment}</p>
+          <div className='avatarImageContainer'>
+            <img src={testimonial.avatarUrl} alt="avatar image" />
+          </div>
+          <p className='author'>{testimonial.author}</p>
+          <p className='jobRole'>{testimonial.jobRole}</p>
         </div>
-          <div className="img-container-testimonials u-select-none">
-            <img className="light-display" src="./public/Images/testimonial 2.svg" alt="customer testimonial 2"/>
-            <img className="dark-display" src="./public/Images/testimonial 2 dark.svg" alt="customer testimonial 2"/>
-          </div>
-          <div className='testimonial'>
-            <div className='quote'>
-              <i className="fa-solid fa-quote-left"></i>
-            </div>
-            <div className='ratingsContainer'>
-            <p className='customerComment'></p>
-            <div className='avatarImageContainer'>
-              
-            </div>
+      ))}
+    </>
+  );
+};
 
-
-            </div>
-          </div>
-      </div>
-    </article>
-  )
-}
-
-export default Testimonials
+export default Testimonials;
