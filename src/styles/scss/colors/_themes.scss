@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i, p.author{
         color: var(--clr-white);
     }
 }
+
 .hamburger .bar{
     @include dark-mode {
         background-color: var(--clr-white);
@@ -63,6 +64,7 @@ button.circle-btn,
         color: var(--clr-white);
     }
 }
+
 .discover-more-text{
     @include dark-mode{
         color: var(--clr-white-high-opacity);

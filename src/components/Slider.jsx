@@ -4,14 +4,14 @@ const Slider = () => {
   return (
     <article className="slider">        
       <h2>How Does It Work?</h2>
-      <div className="mobile-only">
-          <img src="./public/Images/iphone 12 for mobile.svg" alt="iphone 12"/>
+      <div className="mobile-only"> 
+          <img src={`${import.meta.env.BASE_URL}Images/iphone12forMobile.svg`} alt="iphone 12"/>
       </div>
-      <div className="tablet-only" >
-          <img  src="./public/Images/iphone 12 3x for tablet.svg" alt="multiple iphone 12"/>
+      <div className="tablet-only" > 
+          <img  src={`${import.meta.env.BASE_URL}Images/iphone12-3xforTablet.svg`} alt="multiple iphone 12"/>
       </div>
-      <div className="desktop-only" >
-          <img  src="./public/Images/iphone 12 3x for desktop.svg" alt="multiple iphone 12"/>
+      <div className="desktop-only" > 
+          <img  src={`${import.meta.env.BASE_URL}Images/iphone12-3xforDesktop.svg`} alt="multiple iphone 12"/>
       </div>
       <h3 className="mobile-only">Transfers to people from your contact list</h3>
       <h3 className="tablet-only">Step 3. Transfers to people from your contact list</h3>

@@ -5,7 +5,7 @@ const SubscribeSection = () => {
   return (
     <section className="subscribe-section">
       <div className="bell-container">
-        <img src="./public/Images/bell.svg" alt="Bell icon." />
+        <img src={`${import.meta.env.BASE_URL}Images/bell.svg`} alt="Bell icon." />
       </div>
       <h2 className="mobile-tablet-only">Subscribe to our newsletter</h2>
       <h2 className="desktop-only">

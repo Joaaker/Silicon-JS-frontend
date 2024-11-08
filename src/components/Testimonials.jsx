@@ -16,17 +16,17 @@ const Testimonials = () => {
       {testimonials.map((testimonial) => (
         <div key={testimonial.id} className='testimonial'>
           <div className='quote'>
-            <img src="/Images/quotes.svg" alt="quotes" />
+            <img src={`${import.meta.env.BASE_URL}Images/quotes.svg`} alt="quotes" />
           </div>
           <div className='ratingsContainer'>
             {[...Array(testimonial.starRating)].map((_, i) => (
               <div key={i} className='starContainer'>
-                <img src="/Images/star.svg" alt="rating star" />
+                <img src={`${import.meta.env.BASE_URL}Images/star.svg`} alt="rating star" />
               </div>
             ))}
             {[...Array(5 - testimonial.starRating)].map((_, i) => (
               <div key={i} className='emptyStarContainer'>
-                <img src="/Images/emptyStar.svg" alt="rating star" />
+                <img src={`${import.meta.env.BASE_URL}Images/emptyStar.svg`} alt="rating star" />
               </div>
             ))}
           </div>

@@ -43,8 +43,6 @@
     }
 }
 
-
-
 label i.fa-envelope{
     color: var(--clr-gray600);
 }
@@ -65,8 +63,6 @@ label i.fa-envelope{
     font-size: .7rem;
 }
 
-
-
 .consultation-form-container{
     @include flex-column;
     @include center;
@@ -84,7 +80,6 @@ label i.fa-envelope{
         grid-row: 2 / 4;
         padding: 5rem 3rem;
     }
-
 
     h2{
         display: flex;

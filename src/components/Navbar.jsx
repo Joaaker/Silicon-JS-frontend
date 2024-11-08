@@ -11,7 +11,7 @@ const Navbar = () => {
     <HamburgerProvider>
       <nav className="navbar" aria-label="Main navigation">
         <div className="main-logo-container">
-          <img className="u-select-none" src="./public/Images/Si logo.svg" alt="Silicon logo" />
+          <img className="u-select-none" src={`${import.meta.env.BASE_URL}Images/Si-logo.svg`} alt="Silicon logo" />
           <p className="p-logo">Silicon</p>
         </div>
         <NavLink to="/" end id="nav-features"

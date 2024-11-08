@@ -22,7 +22,7 @@ const ContactMain = () => {
         </div>
         <div className="inner-container" id='i-c-g-2'>
           <div className="circle-icon-container">
-            <img src="./public/Images/add-group.svg" alt="application icon"/>
+            <img src={`${import.meta.env.BASE_URL}Images/add-group.svg`} alt="application icon"/>
           </div>
           <h2>Careers</h2>
           <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>

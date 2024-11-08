@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Features2 = () => {
   return (
     <>   
@@ -27,18 +28,18 @@ const Features2 = () => {
             </Link>
         </div>
         <div id="forecast-container">
-            <img src="./public/Images/forecast.svg" alt="forecast preview"/>
+            <img src={`${import.meta.env.BASE_URL}Images/forecast.svg`} alt="forecast preview"/>
         </div>
         <div id="contacts-container">
-            <img src="./public/Images/contacts.svg" alt="contacts preview"/>
+            <img src={`${import.meta.env.BASE_URL}Images/contacts.svg`} alt="contacts preview"/>
         </div>
         <div className="lowerWrapper">  
           <h2 id="lower-1">Receive payment from <br/> international bank details</h2>
           <div className="img-container-features" id="lower-2">
-            <img src="./public/Images/credit-card.svg" alt="credit-card icon" className="icon-img"/>
+            <img src={`${import.meta.env.BASE_URL}Images/credit-card.svg`} alt="credit-card icon" className="icon-img"/>
           </div>
           <div className="img-container-features" id="lower-3">
-            <img src="./public/Images/wallet.svg" alt="wallet icon" className="icon-img"/>
+            <img src={`${import.meta.env.BASE_URL}Images/wallet.svg`} alt="wallet icon" className="icon-img"/>
           </div>
           <div className="infoContainer" id="lower-4">   
             <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>

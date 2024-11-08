@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <DarkModeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/Silicon-JS-frontend">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
