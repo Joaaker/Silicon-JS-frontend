@@ -12,10 +12,8 @@ export const DarkModeProvider = ({ children }) => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark-mode');
-      document.documentElement.classList.remove('light-mode');
       localStorage.setItem('darkmode', 'on');
     } else {
-      document.documentElement.classList.add('light-mode');
       document.documentElement.classList.remove('dark-mode');
       localStorage.setItem('darkmode', 'off');
     }

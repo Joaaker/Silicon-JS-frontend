@@ -31,20 +31,6 @@ html.dark-mode .wrapperBackgroundColor {
   background-color: var(--clr-dark900);
 }
 
-.dark-display {
-  display: none;
-}
-html.dark-mode .dark-display {
-  display: block;
-}
-
-.light-display {
-  display: none;
-}
-html.light-mode .light-display {
-  display: block;
-}
-
 html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6, html.dark-mode .p-logo, html.dark-mode .store-btn, html.dark-mode i, html.dark-mode p.author {
   color: var(--clr-white);
 }
@@ -189,6 +175,10 @@ input, label, button, textarea, select, span, ul {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.displayNone {
+  display: none;
 }
 
 .u-select-none {
