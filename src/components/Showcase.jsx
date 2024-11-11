@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from '../common/DarkModeContext';
+import DiscoverMoreBtn from './DiscoverMoreBtn';
 
 const Showcase = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -18,12 +19,7 @@ const Showcase = () => {
             <img className={`${darkMode ? 'displayNone' : ''}`} src={`${import.meta.env.BASE_URL}Images/googlePlayLight.svg`} alt="Google play logo"/>
             <img className={`${darkMode ? '' : 'displayNone'}`} src={`${import.meta.env.BASE_URL}Images/googlePlayDark.svg`} alt="Google play logo"/>
         </a>
-        <div className="discover-btn-container">
-            <button aria-label="Discover more" className="circle-btn">
-                <i className="fa-solid fa-chevron-up fa-rotate-180"></i>
-            </button>
-            <span className="discover-more-text">Discover more</span>
-        </div>
+        <DiscoverMoreBtn/>
         <div className="imageContainer u-select-none">
             <img src={`${import.meta.env.BASE_URL}Images/iphone12Showcase.svg`} alt="iPhone 12"/>
         </div>

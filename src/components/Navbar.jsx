@@ -21,7 +21,9 @@ const Navbar = () => {
           className={({ isActive }) => `nav-link desktop-only ${isActive ? 'active' : ''}`}
         >Contact</NavLink>
         <DarkModeToggle />
-        <SignInBtn />
+        <div className="desktop-only">
+          <SignInBtn/>
+        </div>
         <HamburgerBtn />
         <ExpandedHamburgerNav/>
       </nav>

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DarkModeProvider } from './common/DarkModeContext';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Construction from './pages/Construction';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Construction" element={<Construction />} />
         </Routes>
       </BrowserRouter>
     </DarkModeProvider>

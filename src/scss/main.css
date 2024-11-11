@@ -1997,6 +1997,20 @@ iframe {
   }
 }
 
+.constructionMain {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 3rem;
+  text-align: center;
+}
+.constructionMain h1 {
+  padding-bottom: 1rem;
+}
+.constructionMain h1 i {
+  margin: 0 0.5rem;
+}
+
 @media (max-width: 767px) {
   .all-logos-container,
   .imageContainer,
