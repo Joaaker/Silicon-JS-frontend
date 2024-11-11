@@ -109,7 +109,7 @@
     }
 }
 
-.discover-btn-container{
+.discoverMoreContainer{
     @include tablet-desktop{
         padding: 2rem 0;
         grid-column: 1 / 3;
@@ -124,6 +124,30 @@
         grid-row: 6 / 7;
         margin-top: auto;
         margin-bottom: 2.5rem;
+    }
+}
+
+.discoverExpanded{
+    @include flex-column;
+    @include center;
+    position: absolute;
+    z-index: 1000;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    &.toggled{
+        transform: scaleY(1);
+    }
+    @include tablet-desktop{
+        max-width: 450px;
+    }
+    p{
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+    a{
+        margin: 1rem;
+        margin-top: 0;
     }
 }
 

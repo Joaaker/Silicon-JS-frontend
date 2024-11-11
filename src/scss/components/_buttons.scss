@@ -75,6 +75,18 @@
     margin-right: auto;
     margin-left: 1rem;
   }
+  &.toggled{
+    button.circle-btn{
+      background-color: var(--clr-primary);
+    
+  
+      i{
+        color: var(--clr-white);
+        transition: transform 0.3s ease;
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 .learn-more-btn{

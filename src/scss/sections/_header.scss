@@ -44,34 +44,6 @@
     }
 }
 
-// .expanded-nav {
-//     @include mobile-tablet{
-//         padding: 1rem;
-//         background-color: transparent;
-//         z-index: 100;
-//         position: fixed;
-//         justify-self: flex-end;
-//         grid-column: 2 / 4;
-//         grid-row: 2 / 3;
-//         margin-top: 220px;
-//         transform: translateX(150%);
-//         transition: transform 0.4s ease-in-out;
-        
-//         &.active {
-//             background-color: var(--clr-background-light);
-//             @include flex-column;
-//             transform: translateX(10px);
-//         }
-//         a{
-//             margin-top: 1rem;
-//         }
-//         .nav-link{
-//             display: flex;
-//             text-align: center;
-
-//         }
-//     }
-// }
 .expanded-nav {
     @include mobile-tablet{
         position: absolute;

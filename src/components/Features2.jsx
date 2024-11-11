@@ -22,7 +22,7 @@ const Features2 = () => {
                 Manage payments and transactions online
               </li>
             </ul>
-            <Link className="primary-btn learn-more-btn" to="/Construction" end>
+            <Link className="primary-btn learn-more-btn" to="/Construction">
               <span>Learn more</span>
               <i className="fa-solid fa-arrow-right"></i> 
             </Link>
@@ -47,7 +47,7 @@ const Features2 = () => {
           <div className="infoContainer" id="lower-5" >   
             <p>A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
           </div>
-          <Link className="primary-btn learn-more-btn" id="lower-6" to="/Construction" end>
+          <Link className="primary-btn learn-more-btn" id="lower-6" to="/Construction">
             <span>Learn more</span>
             <i className="fa-solid fa-arrow-right"></i> 
           </Link>

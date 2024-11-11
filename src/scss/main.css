@@ -316,6 +316,14 @@ input, label, button, textarea, select, span, ul {
   margin-right: auto;
   margin-left: 1rem;
 }
+.discover-btn-container.toggled button.circle-btn {
+  background-color: var(--clr-primary);
+}
+.discover-btn-container.toggled button.circle-btn i {
+  color: var(--clr-white);
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
 
 .learn-more-btn {
   width: 160px;
@@ -960,7 +968,7 @@ a.linkWithArrow i {
 }
 
 @media (min-width: 768px) {
-  .discover-btn-container {
+  .discoverMoreContainer {
     padding: 2rem 0;
     grid-column: 1/3;
     grid-row: 6/8;
@@ -970,12 +978,40 @@ a.linkWithArrow i {
   }
 }
 @media (min-width: 1340px) {
-  .discover-btn-container {
+  .discoverMoreContainer {
     grid-column: 1/2;
     grid-row: 6/7;
     margin-top: auto;
     margin-bottom: 2.5rem;
   }
+}
+
+.discoverExpanded {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out;
+  background-color: white;
+}
+.discoverExpanded.toggled {
+  transform: scaleY(1);
+}
+@media (min-width: 768px) {
+  .discoverExpanded {
+    max-width: 450px;
+  }
+}
+.discoverExpanded p {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.discoverExpanded a {
+  margin: 1rem;
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
