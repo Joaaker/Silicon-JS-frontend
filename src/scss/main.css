@@ -55,10 +55,10 @@ html.dark-mode .consultation-form-container select {
   border-color: var(--clr-dark900);
 }
 
-html.dark-mode .nav-link {
+html.dark-mode .navbar.nav-link {
   color: var(--clr-gray300);
 }
-html.dark-mode .nav-link.active {
+html.dark-mode .navbar.nav-link.active {
   color: var(--clr-primary);
 }
 
@@ -782,20 +782,55 @@ a.linkWithArrow i {
 
 @media (min-width: 0px) and (max-width: 1339px) {
   .expanded-nav {
+    position: absolute;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-self: self-end;
+    justify-content: center;
+    align-items: center;
     grid-column: 2/4;
     grid-row: 2/3;
     transform-origin: top;
     transform: scaleY(0);
     transition: transform 0.3s ease-in-out;
+    margin-top: 200px;
   }
   .expanded-nav.active {
     transform: scaleY(1);
   }
   .expanded-nav a {
     margin-top: 1rem;
+  }
+  .expanded-nav .nav-link {
+    font-family: "Manrope", sans-serif;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    cursor: pointer;
+    transition: all 200ms;
+    color: var(--clr-white);
+    width: 100%;
+    font-weight: normal;
+    font-size: 1rem;
+    display: flex;
+    text-align: center;
+  }
+  .expanded-nav .nav-link:hover, .expanded-nav .nav-link:focus {
+    background-color: #5056f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
+  }
+  .expanded-nav .nav-link:active {
+    background-color: #393fef;
   }
 }
 

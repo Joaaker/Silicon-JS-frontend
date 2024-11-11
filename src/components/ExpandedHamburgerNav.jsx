@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { HamburgerContext } from '../common/HamburgerContext';
 
 const ExpandedNav = () => {
@@ -15,6 +15,11 @@ const ExpandedNav = () => {
         <NavLink to="/Contact" end
         className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
         >Contact</NavLink>
+
+      <Link className="primary-btn" id="signin-auth-btn" to="/">
+        <i className="fa-regular fa-user"></i>
+        <span>Sign in / up</span>
+      </Link>
 
     </nav>
   );

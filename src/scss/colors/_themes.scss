@@ -43,7 +43,7 @@ p, .upperWrapper ul li, label, input{
     }
 }
 
-.nav-link{
+.navbar.nav-link{
     @include dark-mode{
         color: var(--clr-gray300);
         &.active{

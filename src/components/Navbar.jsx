@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import SignInBtn from './SignInBtn';
 import DarkModeToggle from './DarkModeToggle';
 import HamburgerBtn from './HamburgerBtn';
-import ExpandedNav from './ExpandedNav';
+import ExpandedHamburgerNav from './ExpandedHamburgerNav';
 import { HamburgerProvider } from '../common/HamburgerContext';
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
         <DarkModeToggle />
         <SignInBtn />
         <HamburgerBtn />
-        <ExpandedNav/>
+        <ExpandedHamburgerNav/>
       </nav>
     </HamburgerProvider>
   );
