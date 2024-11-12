@@ -8,7 +8,7 @@ html.dark-mode{
     }
 }
 
-h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i, p.author{
+h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i, p.author, label, input{
     @include dark-mode {
         color: var(--clr-white);
     }
@@ -20,25 +20,20 @@ h1, h2, h3, h4, h5, h6, .p-logo, .store-btn, i, p.author{
     }
 }
 
-p, .upperWrapper ul li, label, input{
+p, .upperWrapper ul li{
     @include dark-mode{
         color: var(--clr-white-high-opacity);
     }
 }
 
+
 .consultation-form-container{
     @include dark-mode{
-        h2 {
-            color: var(--clr-white-high-opacity);
-        }
-        input{
-            background-color: var(--clr-white-high-opacity);
-            border-color: var(--clr-dark900);
-        }
-        
-        select{
-            background-color: var(--clr-white-high-opacity);
-            border-color: var(--clr-dark900);
+        background-color: var(--clr-white-opacity);
+
+        input, select, option{
+            background-color: transparent;
+            border: 1px solid var(--clr-white-opacity);
         }
     }
 }
@@ -92,7 +87,7 @@ article.testimonials,
     }
 }
 
-.consultation-form-container {
+.consultation-form-container, .discoverExpanded, option {
     @include dark-mode{
         background-color: var(--clr-dark850);
     }

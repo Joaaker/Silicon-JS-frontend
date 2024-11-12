@@ -8,7 +8,7 @@
   --clr-white-opacity: rgba(255, 255, 255, 0.08);
   --clr-white-low-opacity: rgba(255, 255, 255, 0.04);
   --clr-dark900: #0B0F19;
-  --clr-dark850: #131823;
+  --clr-dark850: #161b27;
   --clr-dark800: #1c2333;
   --clr-gray800: #33354D;
   --clr-gray700: #565973;
@@ -31,7 +31,7 @@ html.dark-mode .wrapperBackgroundColor {
   background-color: var(--clr-dark900);
 }
 
-html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6, html.dark-mode .p-logo, html.dark-mode .store-btn, html.dark-mode i, html.dark-mode p.author {
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4, html.dark-mode h5, html.dark-mode h6, html.dark-mode .p-logo, html.dark-mode .store-btn, html.dark-mode i, html.dark-mode p.author, html.dark-mode label, html.dark-mode input {
   color: var(--clr-white);
 }
 
@@ -39,20 +39,16 @@ html.dark-mode .hamburger .bar {
   background-color: var(--clr-white);
 }
 
-html.dark-mode p, html.dark-mode .upperWrapper ul li, html.dark-mode label, html.dark-mode input {
+html.dark-mode p, html.dark-mode .upperWrapper ul li {
   color: var(--clr-white-high-opacity);
 }
 
-html.dark-mode .consultation-form-container h2 {
-  color: var(--clr-white-high-opacity);
+html.dark-mode .consultation-form-container {
+  background-color: var(--clr-white-opacity);
 }
-html.dark-mode .consultation-form-container input {
-  background-color: var(--clr-white-high-opacity);
-  border-color: var(--clr-dark900);
-}
-html.dark-mode .consultation-form-container select {
-  background-color: var(--clr-white-high-opacity);
-  border-color: var(--clr-dark900);
+html.dark-mode .consultation-form-container input, html.dark-mode .consultation-form-container select, html.dark-mode .consultation-form-container option {
+  background-color: transparent;
+  border: 1px solid var(--clr-white-opacity);
 }
 
 html.dark-mode .navbar.nav-link {
@@ -90,7 +86,7 @@ html.dark-mode .testimonial {
   background-color: var(--clr-white-low-opacity);
 }
 
-html.dark-mode .consultation-form-container {
+html.dark-mode .consultation-form-container, html.dark-mode .discoverExpanded, html.dark-mode option {
   background-color: var(--clr-dark850);
 }
 
@@ -145,7 +141,7 @@ html.dark-mode .wrapper {
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
   }
 }
 *, *::before, *::after {
