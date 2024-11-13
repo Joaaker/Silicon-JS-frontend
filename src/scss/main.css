@@ -43,10 +43,10 @@ html.dark-mode p, html.dark-mode .upperWrapper ul li {
   color: var(--clr-white-high-opacity);
 }
 
-html.dark-mode .navbar.nav-link {
-  color: var(--clr-gray300);
+html.dark-mode .navbar .nav-link {
+  color: var(--clr-white-high-opacity);
 }
-html.dark-mode .navbar.nav-link.active {
+html.dark-mode .navbar .nav-link.active {
   color: var(--clr-primary);
 }
 

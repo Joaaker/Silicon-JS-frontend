@@ -26,9 +26,9 @@ p, .upperWrapper ul li{
     }
 }
 
-.navbar.nav-link{
+.navbar .nav-link{
     @include dark-mode{
-        color: var(--clr-gray300);
+        color: var(--clr-white-high-opacity);
         &.active{
             color: var(--clr-primary);
         }
@@ -174,7 +174,6 @@ article.testimonials,
             background-color: darken($dark850, 4%);
             color: var(--clr-white);
         }
-        
         .custom-select__option--is-selected {
             background-color: darken($dark850, 2%);
             color: var(--clr-white);
