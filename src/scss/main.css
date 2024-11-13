@@ -156,6 +156,13 @@ html.dark-mode .custom-select-container .custom-select__single-value {
   color: var(--clr-white);
 }
 
+html.dark-mode .externalLinksContainer a {
+  background-color: var(--clr-white-opacity);
+}
+html.dark-mode .externalLinksContainer a i {
+  color: var(--clr-white-high-opacity);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: auto;
@@ -356,7 +363,7 @@ input, label, button, textarea, select, span, ul {
   }
 }
 @media (max-width: 767px) and (max-width: 335px) {
-  #subscribe-btn { /* För väldigt små telefoner*/
+  #subscribe-btn { /* For small phones*/
     padding: 1rem 0px;
   }
 }
@@ -691,6 +698,13 @@ p {
   margin-left: 0.7rem;
 }
 
+#contact-us-link {
+  margin: 2rem auto;
+  width: 163px;
+  height: 49px;
+  font-size: medium;
+}
+
 .pageLink {
   font-family: "Manrope", sans-serif;
   text-decoration: none;
@@ -842,19 +856,19 @@ a.linkWithArrow i {
 
 @media (min-width: 0px) and (max-width: 1339px) {
   .expanded-nav {
-    position: absolute;
-    z-index: 1000;
     display: flex;
     flex-direction: column;
-    justify-self: self-end;
     justify-content: center;
     align-items: center;
+    justify-self: self-end;
+    position: absolute;
+    z-index: 1000;
     grid-column: 2/4;
     grid-row: 2/3;
     transform-origin: top;
     transform: scaleY(0);
     transition: transform 0.3s ease-in-out;
-    margin-top: 200px;
+    margin-top: 14rem;
   }
   .expanded-nav.active {
     transform: scaleY(1);
@@ -1615,6 +1629,7 @@ article.features {
   outline: none;
 }
 .dropdown-btn-container .dropdown-btn span {
+  color: black;
   font-weight: 600;
   font-size: 1rem;
   margin-left: 0.4rem;
@@ -1706,13 +1721,6 @@ article.features {
   .contact-us-container .contact-container .purple i {
     color: var(--clr-primary);
   }
-}
-
-#contact-us-btn {
-  margin: 2rem auto;
-  width: 163px;
-  height: 49px;
-  font-size: medium;
 }
 
 .subscribe-section {

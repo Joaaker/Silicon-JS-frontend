@@ -42,6 +42,13 @@
     }
 }
 
+#contact-us-link{
+    margin: 2rem auto;
+    width: 163px;
+    height: 49px;
+    font-size: medium;
+}
+
 .pageLink{
     @include link;
     font-size: 1rem;

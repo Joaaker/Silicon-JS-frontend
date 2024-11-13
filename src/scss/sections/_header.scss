@@ -46,18 +46,17 @@
 
 .expanded-nav {
     @include mobile-tablet{
+        @include flex-column;
+        @include center;
+        justify-self: self-end;
         position: absolute;
         z-index: 1000;
-        @include flex-column;
-        justify-self: self-end;
-        justify-content: center;
-        align-items: center;
         grid-column: 2 / 4;
         grid-row: 2 / 3;
         transform-origin: top;
         transform: scaleY(0);
         transition: transform 0.3s ease-in-out;
-        margin-top: 200px;
+        margin-top: 14rem;
       
         &.active {
           transform: scaleY(1);

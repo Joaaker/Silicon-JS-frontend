@@ -184,3 +184,14 @@ article.testimonials,
         }
     }
 }
+
+.externalLinksContainer{
+    @include dark-mode{
+        a{
+            background-color: var(--clr-white-opacity);
+            i{
+                color:var(--clr-white-high-opacity);
+            }
+        }
+    }
+}

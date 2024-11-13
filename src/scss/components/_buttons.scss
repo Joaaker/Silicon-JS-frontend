@@ -104,7 +104,7 @@
   @include mobile{
     padding:  1rem 0.5rem;
     
-    @media (max-width: 335px){ /* För väldigt små telefoner*/
+    @media (max-width: 335px){ /* For small phones*/
         padding: 1rem 0px;
     }
   }

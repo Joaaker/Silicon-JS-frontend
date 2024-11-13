@@ -10,7 +10,7 @@ const FAQContactSection = () => {
         <p>Still have unanswered questions and need to get <br className="hide-for-mobile"/> in touch?</p>
       </div>
       <FAQ/>
-      <button id="contact-us-btn" className="primary-btn mobile-only">Contact us now</button>
+      <Link to="/Contact" id="contact-us-link" className="primary-btn mobile-only">Contact us now</Link>
       <div className="contact-us-container hide-for-mobile">
         <div className="contact-container">
           <i className="fa-solid fa-phone-volume"></i>
