@@ -5,7 +5,6 @@ import  ErrorMessage  from '../common/ErrorMessage';
 import CustomSelect from './CustomSelect';
 import ScrollToTop from '../common/ScrollToTop';
 
-
 const ConsultationForm = () => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -51,7 +50,6 @@ const ConsultationForm = () => {
             isValid = false;
         }
         
-
         setErrors(formErrors);
         return isValid;
     };

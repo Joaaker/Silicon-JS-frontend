@@ -46,9 +46,9 @@
     @include link;
     font-size: 1rem;
     color: var(--clr-gray600);
-}
-.pageLink.active{
-    color: var(--clr-primary);
+    &.active{
+        color: var(--clr-primary);
+    }
 }
 
 #homepageLink{

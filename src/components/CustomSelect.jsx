@@ -1,3 +1,4 @@
+// Code for CustomSelect written with assistance from ChatGPT
 import React from 'react';
 import Select from 'react-select';
 import ErrorMessage from '../common/ErrorMessage';

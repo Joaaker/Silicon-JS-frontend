@@ -5,7 +5,6 @@
 .indexMain{
     @include flex-column;
     @include center;
-    
     p{
         @include text;
     }

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import FAQ from './FAQ-Items'
 
-
 const FAQContactSection = () => {
   return (
     <section className="FAQ-contact-section">   

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import  validateEmail  from '../common/EmailValidation';
 import  ErrorMessage  from '../common/ErrorMessage';
 
-
 const SubscribeForm = () => {
     const [formData, setFormData] = useState({ email: '' });
     const [submitted, setSubmitted] = useState(false);
@@ -41,7 +40,6 @@ const SubscribeForm = () => {
             setFormData({ email: '' });
             console.log('Subscribe was submitted');
         }
-
     };
 
     const handleReturn = () => {

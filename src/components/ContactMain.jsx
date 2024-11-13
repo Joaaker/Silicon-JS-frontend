@@ -15,7 +15,7 @@ const ContactMain = () => {
           </div>
             <h2>Email us</h2>
             <p>Please feel free to drop us a line. We will respond as soon as possible.</p>
-            <Link to="/" className="linkWithArrow">
+            <Link to="/Construction" className="linkWithArrow">
               <span>Leave a message</span>
               <i className="fa-solid fa-arrow-right"></i>
             </Link>
@@ -26,7 +26,7 @@ const ContactMain = () => {
           </div>
           <h2>Careers</h2>
           <p>Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
-          <Link to="/" className="linkWithArrow">
+          <Link to="/Construction" className="linkWithArrow">
             <span>Send an application</span>
             <i className="fa-solid fa-arrow-right"></i>
           </Link>

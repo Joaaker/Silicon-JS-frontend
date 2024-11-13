@@ -577,6 +577,7 @@ label i.fa-envelope {
   border-radius: 8px;
   font-family: "Manrope", sans-serif;
   font-size: 1.2rem;
+  transition: 0s;
 }
 .consultation-form-container form .custom-select__control:focus, .consultation-form-container form .custom-select__control:active {
   border-color: var(--clr-gray700);
@@ -700,7 +701,6 @@ p {
 .pageLink:link, .pageLink:visited, .pageLink:hover, .pageLink:active {
   text-decoration: none;
 }
-
 .pageLink.active {
   color: var(--clr-primary);
 }

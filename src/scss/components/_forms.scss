@@ -133,6 +133,7 @@ label i.fa-envelope{
             border-radius: 8px;
             font-family: "Manrope", sans-serif;
             font-size: 1.2rem;
+            transition: 0s;
             &:focus,
             &:active {
                 border-color: var(--clr-gray700);
