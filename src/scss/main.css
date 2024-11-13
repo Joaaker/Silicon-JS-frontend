@@ -43,14 +43,6 @@ html.dark-mode p, html.dark-mode .upperWrapper ul li {
   color: var(--clr-white-high-opacity);
 }
 
-html.dark-mode .consultation-form-container {
-  background-color: var(--clr-white-opacity);
-}
-html.dark-mode .consultation-form-container input, html.dark-mode .consultation-form-container select, html.dark-mode .consultation-form-container option {
-  background-color: transparent;
-  border: 1px solid var(--clr-white-opacity);
-}
-
 html.dark-mode .navbar.nav-link {
   color: var(--clr-gray300);
 }
@@ -84,10 +76,6 @@ html.dark-mode .subscribe-section {
 html.dark-mode .circle-icon-container,
 html.dark-mode .testimonial {
   background-color: var(--clr-white-low-opacity);
-}
-
-html.dark-mode .consultation-form-container, html.dark-mode .discoverExpanded, html.dark-mode option {
-  background-color: var(--clr-dark850);
 }
 
 html.dark-mode .FAQ-item {
@@ -131,16 +119,45 @@ html.dark-mode .store-btn {
   background-color: var(--clr-white);
 }
 
-html.dark-mode .light-display {
-  display: none;
-}
-
 html.dark-mode .wrapper {
   background-color: var(--clr-dark800);
 }
 
+html.dark-mode .consultation-form-container, html.dark-mode .discoverExpanded {
+  background-color: var(--clr-dark850);
+}
+
+html.dark-mode .consultation-form-container input {
+  background-color: transparent;
+  border: 1px solid var(--clr-white-opacity);
+}
+
+html.dark-mode .custom-select-container .custom-select__control {
+  background-color: transparent;
+  border: 1px solid var(--clr-white-opacity);
+}
+html.dark-mode .custom-select-container .custom-select__menu {
+  background-color: var(--clr-dark850);
+  border-color: var(--clr-white-high-opacity);
+}
+html.dark-mode .custom-select-container .custom-select__option {
+  color: var(--clr-white);
+  background-color: transparent;
+}
+html.dark-mode .custom-select-container .custom-select__option--is-focused {
+  background-color: #0f121a;
+  color: var(--clr-white);
+}
+html.dark-mode .custom-select-container .custom-select__option--is-selected {
+  background-color: #121620;
+  color: var(--clr-white);
+}
+html.dark-mode .custom-select-container .custom-select__single-value {
+  color: var(--clr-white);
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  :root {
+  html {
     scroll-behavior: auto;
   }
 }
@@ -417,6 +434,15 @@ input, label, button, textarea, select, span, ul {
   overflow: hidden;
 }
 
+.error-message {
+  color: var(--clr-system-error);
+  font-size: 12px;
+}
+
+.errorPlaceholder {
+  margin-bottom: 17px;
+}
+
 .subscribe-form {
   background-color: var(--clr-white);
   display: flex;
@@ -480,11 +506,6 @@ label i.fa-envelope {
   width: 25%;
 }
 
-.error-message {
-  color: var(--clr-system-error);
-  font-size: 0.7rem;
-}
-
 .consultation-form-container {
   display: flex;
   flex-direction: column;
@@ -546,15 +567,50 @@ label i.fa-envelope {
 .consultation-form-container form input:focus, .consultation-form-container form input:active {
   border-color: var(--clr-gray700);
 }
-.consultation-form-container form select {
-  outline: none;
-  font-size: 1.3rem;
-  padding: 0.7rem;
-  border: 1px solid var(--clr-gray400);
-  border-radius: 8px;
+.consultation-form-container form .custom-select-container {
+  width: 100%;
 }
-.consultation-form-container form select:focus, .consultation-form-container form select:active {
+.consultation-form-container form .custom-select__control {
+  background-color: white;
+  border: 1px solid var(--clr-gray400);
+  min-height: 53px;
+  border-radius: 8px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+}
+.consultation-form-container form .custom-select__control:focus, .consultation-form-container form .custom-select__control:active {
   border-color: var(--clr-gray700);
+}
+.consultation-form-container form .custom-select__control--is-focused {
+  border: 1px solid var(--clr-gray400);
+  box-shadow: none;
+}
+.consultation-form-container form .custom-select__menu {
+  background-color: white;
+  border: 1px solid var(--clr-gray400);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.consultation-form-container form .custom-select__option {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  padding: 10px;
+  color: black;
+}
+.consultation-form-container form .custom-select__option--is-focused {
+  background-color: #ebebeb;
+}
+.consultation-form-container form .custom-select__option--is-selected {
+  background-color: #f2f2f2;
+  color: black;
+}
+.consultation-form-container form .custom-select__single-value {
+  color: black;
+}
+.consultation-form-container form .custom-select__indicator-separator {
+  background-color: transparent;
+}
+.consultation-form-container form .custom-select__dropdown-indicator {
+  color: var(--clr-gray800);
 }
 .consultation-form-container form #appointmentBtn {
   margin-top: 7rem;
@@ -1634,6 +1690,9 @@ article.features {
   }
   .contact-us-container .contact-container a {
     text-decoration: none;
+  }
+  .contact-us-container .contact-container a span {
+    margin-right: 0.5rem;
   }
   .contact-us-container .contact-container .green {
     color: var(--clr-green);

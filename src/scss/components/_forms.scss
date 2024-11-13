@@ -1,3 +1,12 @@
+.error-message{
+    color: var(--clr-system-error);
+    font-size: 12px;
+}
+
+.errorPlaceholder{
+    margin-bottom: 17px;
+}
+
 .subscribe-form{
     background-color: var(--clr-white);
     display: flex;
@@ -58,11 +67,6 @@ label i.fa-envelope{
     }
 }
 
-.error-message{
-    color: var(--clr-system-error);
-    font-size: .7rem;
-}
-
 .consultation-form-container{
     @include flex-column;
     @include center;
@@ -118,17 +122,60 @@ label i.fa-envelope{
                 border-color: var(--clr-gray700);
             }
         }
-        select{
-            outline: none;
-            font-size: 1.3rem;
-            padding: 0.7rem;
+        .custom-select-container {
+            width: 100%;
+        }
+        
+        .custom-select__control {
+            background-color: white;
             border: 1px solid var(--clr-gray400);
+            min-height: 53px;
             border-radius: 8px;
-            
+            font-family: "Manrope", sans-serif;
+            font-size: 1.2rem;
             &:focus,
             &:active {
                 border-color: var(--clr-gray700);
             }
+        }
+
+        .custom-select__control--is-focused {
+            border: 1px solid var(--clr-gray400);
+            box-shadow: none;
+        }
+        
+        .custom-select__menu {
+            background-color: white;
+            border: 1px solid var(--clr-gray400);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .custom-select__option {
+            font-family: "Manrope", sans-serif;
+            font-size: 1.2rem;
+            padding: 10px;
+            color: black;
+        }
+        
+        .custom-select__option--is-focused {
+            background-color: darken($clr-white, 8%);
+        }
+        
+        .custom-select__option--is-selected {
+            background-color: darken($clr-white, 5%);
+            color: black;
+        }
+        
+        .custom-select__single-value {
+            color: black;
+        }
+        
+        .custom-select__indicator-separator {
+            background-color: transparent;
+        }
+        
+        .custom-select__dropdown-indicator {
+            color: var(--clr-gray800);
         }
 
         #appointmentBtn{

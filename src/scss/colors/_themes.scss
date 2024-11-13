@@ -26,18 +26,6 @@ p, .upperWrapper ul li{
     }
 }
 
-
-.consultation-form-container{
-    @include dark-mode{
-        background-color: var(--clr-white-opacity);
-
-        input, select, option{
-            background-color: transparent;
-            border: 1px solid var(--clr-white-opacity);
-        }
-    }
-}
-
 .navbar.nav-link{
     @include dark-mode{
         color: var(--clr-gray300);
@@ -87,12 +75,6 @@ article.testimonials,
     }
 }
 
-.consultation-form-container, .discoverExpanded, option {
-    @include dark-mode{
-        background-color: var(--clr-dark850);
-    }
-}
-
 .FAQ-item{
     @include dark-mode {
         background-color: var(--clr-white-low-opacity);  
@@ -107,14 +89,12 @@ article.testimonials,
     }
 }
 
-
 .dropdown-btn-container{
     @include dark-mode {
         .dropdown-btn {
             span {
                 color: var(--clr-white);
             }
-
             i {
                 background-color: var(--clr-white-low-opacity);
             }
@@ -155,14 +135,52 @@ article.testimonials,
     }
 }
 
-.light-display{
-    @include dark-mode{
-        display: none;
-    }
-}
-
 .wrapper{
     @include dark-mode{
         background-color: var(--clr-dark800);
+    }
+}
+
+.consultation-form-container, .discoverExpanded{
+    @include dark-mode{
+        background-color: var(--clr-dark850);
+    }
+}
+
+.consultation-form-container{
+    @include dark-mode{
+        input{
+            background-color: transparent;
+            border: 1px solid var(--clr-white-opacity);
+        }
+    }
+}
+
+.custom-select-container{
+    @include dark-mode{
+        .custom-select__control{
+            background-color: transparent;
+            border: 1px solid var(--clr-white-opacity);
+        }
+        .custom-select__menu {
+            background-color: var(--clr-dark850);
+            border-color: var(--clr-white-high-opacity);
+        }
+        .custom-select__option{
+            color: var(--clr-white);
+            background-color: transparent;
+        }
+        .custom-select__option--is-focused {
+            background-color: darken($dark850, 4%);
+            color: var(--clr-white);
+        }
+        
+        .custom-select__option--is-selected {
+            background-color: darken($dark850, 2%);
+            color: var(--clr-white);
+        }
+        .custom-select__single-value {
+            color: var(--clr-white);
+        }
     }
 }

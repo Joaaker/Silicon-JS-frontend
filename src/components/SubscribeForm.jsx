@@ -1,6 +1,8 @@
 // Code for SubscribeForm written with assistance from ChatGPT
 import React, { useState } from 'react';
-import { validateEmail } from '../common/EmailValidation';
+import  validateEmail  from '../common/EmailValidation';
+import  ErrorMessage  from '../common/ErrorMessage';
+
 
 const SubscribeForm = () => {
     const [formData, setFormData] = useState({ email: '' });
@@ -17,11 +19,11 @@ const SubscribeForm = () => {
         e.preventDefault();
 
         if (formData.email === '') {
-            setError('Please fill out this field.');
+            setError('Please enter your email address.');
             return;
         }
         if (!validateEmail(formData.email)) {
-            setError('Invalid email address.');
+            setError('Please enter a valid email address.');
             return;
         }
 
@@ -68,7 +70,7 @@ const SubscribeForm = () => {
                 autoComplete="email" required/>
                 <button type="submit" className="primary-btn">Subscribe</button>
             </form>
-            {error && <span className="error-message">{error}</span>}
+            <ErrorMessage message={error} />
         </div>
     );
 }
