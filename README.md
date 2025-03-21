@@ -1,5 +1,6 @@
 
 Introduktion
+
 I denna inlämningsuppgift ska du omvandla din sida som du byggt i HTML & CSS kursen till att vara en sida som bygger på Javascript med React och Vite. Instruktioner om detta kommer under v.43. Att göra om en sida till att vara Javascriptbaserad handlar om att dela upp dina olika sektioner i komponenter.
 
 Du kommer fortfarande använda dig av samma design som du använt dig av i tidigare kurs, men nu tillkommer det en sida, en kontaktsida som du ska designa upp. Så min rekommendation är att du se till att designa och strukturera upp den sidan denna vecka. Det spelar ingen roll om du har CSS eller SCSS båda två lösningarna fungerar att använda.
